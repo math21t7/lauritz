@@ -1,0 +1,54 @@
+---
+import Card from "../components/Card.astro";
+import "../styles/global.css";
+import sidebord from "../images/sidebord.jpg";
+import design_awards from "../images/design_awards.jpg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Oversigt over components</title>
+  </head>
+  <body>
+    <h1>Oversigt over components</h1>
+    <!-- <Card titel beskrivelse deluxe nyproduceret /> -->
+    <h2>Alle properties (mobil version)</h2>
+    <section>
+      <Card
+      image={sidebord}
+      deluxe={true}
+      link={true}
+      titel="Ejner Larsen & Axel Bender Madsen. Sidebord / Lampebord"
+      beskrivelse={true}
+      naeste_bud={true}
+      pris={true}
+      variant="primary"
+    />
+  </section>
+  </body>
+  <style>
+    @media (min-width:768px){
+    section {
+      display:flex;
+      justify-content: center;
+      gap:5rem;
+    }
+  }
+    h1{
+    text-align:center;
+  }
+     h1, h2, h3, h4{
+    font-family: var(--brand);
+    margin:2rem;
+    text-align:center;
+    
+  }
+  </style>
+</html>

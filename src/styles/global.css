@@ -1,0 +1,96 @@
+:root {
+    /* options */
+    /*---farver---*/
+
+    --color-green-500: #585845;
+    --color-green-400: #87876A;
+    --color-green-300: #9F9F85;
+    --color-green-200: #BABAA7;
+    --color-green-100: #D9D9C2;
+    --color-red-500: #751825;
+    --color-red-400: #B22539;
+    --color-red-300: #D43148;
+    --color-red-200:#DE6073;
+    --color-red-100:#E68593;
+    --color-cream-500:#EFE8E0;
+    --color-cream-300:#FBF7F2;
+    --color-cream-100: #FCF9F8;
+    --color-white: #FBFBFB;
+    --color-black:#0B0B0B;
+    --color-grey-500: #333333;
+    --color-grey-300: #7B7C7F;
+    --color-grey-100: #DEDDDE;
+
+    /*---font---*/
+    
+    --font-family: 'Poppins', sans-serif;
+    --text-size-5xl: 4rem;
+    --text-size-4xl: 3.063rem;
+    --text-size-3xl: 1.938rem;
+    --text-size-2xl: 1.563rem;
+    --text-size-xl: 1.25rem;
+    --text-size-lg: 1.25rem;
+    --text-size-md: 1.125rem;
+    --text-size-sm: 1rem;
+    --text-size-xs: 0.75rem;
+    --text-weight-bold: 700;
+    --text-weight-semibold: 600;
+    --text-weight-medium: 500;
+    --text-weight-regular: 400;
+
+    /*---mobile small---*/
+
+ 
+
+    /*---mobile large---*/
+    --text-padding: 10px;
+    --padding-yx: 10px;
+    --width-350: 350px;
+    --border-2px: 2px solid var(--color-cream-500);
+    --box-shadow: drop-shadow(0px 5px 8px var(--color-grey-100));
+
+
+  /*---image---*/
+  
+
+
+
+
+
+  
+    /* ---------------------------aliases/component tokens------------------------ */
+
+    /*---font---*/
+    --brand: var(--font-family);
+    --p-small: var(--text-size-sm);
+    --p-large: var(--text-size-md);
+    --text-weight-medium: var(--text-weight-400);
+
+    /*---farver---*/
+    --primary-card-bg: var(--color-cream-300);
+    --link-default-color: var(--color-red-300);
+    --link-hover-color: var(--color-red-500);
+
+    /*---mobile small---*/
+
+  
+
+    /*---mobile large---*/
+    
+    --space-between-items: var(--text-padding);
+    --padding-mobile: var(--padding-yx);
+    --mobile-large-width: var(--width-350);
+    --mobile-border: var(--border-2px);
+    --mobile-shadow:var(--box-shadow);
+
+  
+
+    
+
+    /*---desktop small---*/
+
+    /*---desktop large---*/
+
+
+  }
+  

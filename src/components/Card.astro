@@ -1,0 +1,69 @@
+---
+const { titel, beskrivelse, deluxe, variant, link, image, naeste_bud, pris } = Astro.props;
+---
+
+<article data-variant={variant}>
+  <img src={image} alt="" />
+  {deluxe == true && <p>Deluxe</p>}
+  <h3>{titel}</h3>
+  {beskrivelse == true && <p class="small">"Ejner Larsen & Axel Bender Madsen. Sidebord / Lampebord af massiv mahogni. H. 40, 27 x 27 cm. Formgivet omkring 1955. Udført hos Snedkermester Willy Beck. Alm. / let brugspræg, samt lille reparation på understel."</p>}
+  {naeste_bud == true && <p class="large">Næste bud: DKK 3.000</p>}
+  {link == true && <a href="#">Læs hele artiklen</a>}
+</article>
+
+<style>
+
+  article {
+    background:var(--primary-card-bg);
+    font-family:var(--brand);
+    width: var(--width-350);
+    padding: var(--padding-mobile);
+    filter: var(--mobile-shadow);
+    border: var(--mobile-border);
+  }
+  .naeste_bud{
+    background:cyan;
+  }
+
+  img{
+    max-width:100%;
+    height: 330px;
+    width: 330px;
+    place-self:center;
+
+  }
+  
+  h3{
+    font-size: var(--title);
+    padding-bottom:var(--space-between-items);
+    font-weight: var(--text-weight-regular);
+  }
+  p{
+    padding-bottom:var(--space-between-items);
+  }
+  .small{
+    font-size:var(--p-small);
+  }
+  .large{
+    font-size:var(--p-large);
+    font-weight: var(--text-weight-);
+  }
+  a {
+    color: var(--link-default-color);
+  }
+  a:hover{
+    color:var(--link-hover-color);
+  }
+  .artikel{
+    background:pink;
+  }
+
+
+  /* Klasse hvis man vil ændre det enkelte card uden at ændre de andre. Dette kan dog ikke ses pga. en variant fra global.css er på lige nu.*/
+
+  /*[data-variant="primary"] {
+    background: var(--primary-card-bg);
+
+  }*/
+
+</style>
