@@ -38,6 +38,7 @@
     --text-weight-700: 700;
     --text-weight-600: 600;
   
+    --border-focus: 4px solid var(--color-green-500);
 
     /*---mobile small---*/
     --mobile-image-small: 142px;

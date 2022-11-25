@@ -37,6 +37,10 @@ const { titel, beskrivelse, deluxe, variant, small, large, link, image, naeste_b
     filter: var(--mobile-shadow);
     border: var(--mobile-border);
   }
+  :focus{
+    border: var(--border-focus);
+    outline:none;
+  }
   img{
     max-width:100%;
     height: 330px;
@@ -136,11 +140,16 @@ const { titel, beskrivelse, deluxe, variant, small, large, link, image, naeste_b
     width:var(--width-264);  
     padding: var(--padding-15); 
   }
+  [data-variant="desktop-small"]:hover{
+    transform:scale(1.05)
+  }
+
 
   [data-variant="desktop-medium"]{
     width:var(--width-570);
     height:var(--height-362);
     padding: var(--padding-15); 
+    
   }
  
   @media (min-width:769px){
@@ -150,6 +159,8 @@ const { titel, beskrivelse, deluxe, variant, small, large, link, image, naeste_b
     font-size: var(--text-size-xl);
   }
 }
-
+[data-variant="desktop-large"]:hover{
+    transform:scale(1.05)
+  }
 
 </style>
