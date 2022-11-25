@@ -1,8 +1,8 @@
 ---
 import Card from "../components/Card.astro";
 import "../styles/global.css";
-import sidebord from "../images/sidebord.jpg";
-import design_awards from "../images/design_awards.jpg";
+import chair from "../images/chair.jpg";
+import christmas from "../images/christmas.jpg";
 ---
 
 <html lang="en">
@@ -19,26 +19,115 @@ import design_awards from "../images/design_awards.jpg";
   <body>
     <h1>Oversigt over components</h1>
     <!-- <Card titel beskrivelse deluxe nyproduceret /> -->
-    <h2>Alle properties (mobil version)</h2>
+    <h2>Alle properties</h2>
     <section>
       <Card
-      image={sidebord}
+      christmas={false}
+    chair={true}
       deluxe={true}
+      favorite={true}
+      nyproduceret={false}
       link={true}
-      titel="Ejner Larsen & Axel Bender Madsen. Sidebord / Lampebord"
+      titel="Henry Kjærnulf for Nyrup Møbelfabrik. 1960/70'erne"
       beskrivelse={true}
       naeste_bud={true}
       pris={true}
-      variant="primary"
+      variant="large"
     />
+    <Card
+    christmas={false}
+    chair={true}
+    deluxe={false}
+    favorite={true}
+    nyproduceret={true}
+    link={true}
+    titel="Henry Kjærnulf for Nyrup Møbelfabrik. 1960/70'erne"
+    beskrivelse={true}
+    naeste_bud={true}
+    variant="large"
+  />
+  </section>
+  <h2>Fremhævet vare (mobil)</h2>
+  <section>
+    <Card
+    christmas={false}
+    chair={false}
+    chair_small={true}
+    deluxe={false}
+    nyproduceret={false}
+    favorite={false}
+    link={false}
+    titel="Henry Kjærnulf for Nyrup Møbelfabrik. 1960/70'erne"
+    beskrivelse={false}
+    artikel_beskrivelse={false}
+    naeste_bud={true}
+    variant="small"
+  />
+  </section>
+  <h2>Artikel (mobil)</h2>
+  <section>
+    <Card
+    christmas={true}
+    chair={false}
+    deluxe={false}
+    nyproduceret={false}
+    link={true}
+    titel="Lauritz-jul på Göholm Gods, boligreportage i Bo Bedre, julen 2020"
+    beskrivelse={false}
+    artikel_beskrivelse={true}
+    naeste_bud={false}
+    variant="large"
+  />
+
+  </section>
+  <h2>Fremhævet vare (desktop)</h2>
+  <section>
+    <Card
+    christmas={false}
+    chair={false}
+    chair_small={false}
+    chair_medium={true}
+    deluxe={false}
+    nyproduceret={false}
+    favorite={false}
+    favorite_small={true}
+    link={false}
+    titel="Henry Kjærnulf for Nyrup Møbelfabrik. 1960/70'erne"
+    beskrivelse={false}
+    artikel_beskrivelse={false}
+    naeste_bud={true}
+    variant="desktop-small"
+  />
+
+  </section>
+  <h2>Artikel (desktop)</h2>
+  <section>
+    <Card
+    christmas={true}
+    chair={false}
+    deluxe={false}
+    nyproduceret={false}
+    favorite={false}
+    link={true}
+    titel="Lauritz-jul på Göholm Gods, boligreportage i Bo Bedre, julen 2020"
+    beskrivelse={false}
+    artikel_beskrivelse={true}
+    naeste_bud={false}
+    variant="desktop-large"
+  />
+
   </section>
   </body>
   <style>
     @media (min-width:768px){
+      section{
+        display:grid;
+        place-content:center;
+      }
     section {
       display:flex;
       justify-content: center;
-      gap:5rem;
+      gap:3rem;
     }
   }
     h1{

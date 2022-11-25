@@ -1,19 +1,35 @@
 ---
-const { titel, beskrivelse, deluxe, variant, link, image, naeste_bud, pris } = Astro.props;
+const { titel, beskrivelse, deluxe, variant, small, large, link, image, naeste_bud, nyproduceret, artikel_beskrivelse, favorite, chair, christmas, chair_small, chair_medium, favorite_small } = Astro.props;
 ---
 
-<article data-variant={variant}>
-  <img src={image} alt="" />
-  {deluxe == true && <p>Deluxe</p>}
+
+<article class={small == true && "small"} data-variant={variant}>
+  {chair == true && <img class="chair" src="/public/images/chair.jpg"/>}
+  {chair_small == true && <img class="chair_small" src="/public/images/chair.jpg"/>}
+  {chair_medium == true && <img class="chair_medium" src="/public/images/chair.jpg"/>}
+  {christmas == true && <img class="christmas" width="554" src="/public/images/christmas.jpg"/>}
+  {deluxe == true && <h4 class="deluxe">deLuxe</h4>}
+  {nyproduceret == true && <h4 class="nyproduceret">Nyproduceret</h4>}
+  {favorite == true && <svg class="favorite" width="32" height="32" viewBox="0 0 24 24"><path fill="#7B7C7F" d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"/></svg>}
+  {favorite_small == true && <svg class="favorite_small" width="32" height="32" viewBox="0 0 24 24"><path fill="#7B7C7F" d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"/></svg>}
+
   <h3>{titel}</h3>
-  {beskrivelse == true && <p class="small">"Ejner Larsen & Axel Bender Madsen. Sidebord / Lampebord af massiv mahogni. H. 40, 27 x 27 cm. Formgivet omkring 1955. Udført hos Snedkermester Willy Beck. Alm. / let brugspræg, samt lille reparation på understel."</p>}
-  {naeste_bud == true && <p class="large">Næste bud: DKK 3.000</p>}
+  {beskrivelse == true && <p class="p_small">"Ejner Larsen & Axel Bender Madsen. Sidebord / Lampebord af massiv mahogni. H. 40, 27 x 27 cm. Formgivet omkring 1955. Udført hos Snedkermester Willy Beck. Alm. / let brugspræg, samt lille reparation på understel."</p>}
+  {artikel_beskrivelse  == true && <p class="p_small">
+    For Mette Rode Sundstrøm og Bengt Sundstrøm er julen en farverig,
+    frodig og generøs fejring af livet. Det fornægter sig ikke, at parret
+    bag Lauritz.com og Stockholms Auktionsverk er passionerede stor-
+    samlere af det meste, og at næsten alt i deres hjem er købt på
+    auktion i deres egne 28 auktionshuse.</p> }
+  {naeste_bud == true && <p class="p_large">Næste bud: DKK 3.400</p>}
   {link == true && <a href="#">Læs hele artiklen</a>}
 </article>
 
 <style>
 
   article {
+    display: grid;
+    position:relative;
     background:var(--primary-card-bg);
     font-family:var(--brand);
     width: var(--width-350);
@@ -21,49 +37,120 @@ const { titel, beskrivelse, deluxe, variant, link, image, naeste_bud, pris } = A
     filter: var(--mobile-shadow);
     border: var(--mobile-border);
   }
-  .naeste_bud{
-    background:cyan;
-  }
-
   img{
     max-width:100%;
     height: 330px;
     width: 330px;
     place-self:center;
+    position:relative;
+  }
 
+  .deluxe{
+    font: var(--brand);
+    position:absolute;
+    top: 295px;
+    right: 20px;
+    background-color:var(--deluxe-background);
+    width:70px;
+    height: 24px;
+    text-align:center;
+    font-weight: var(--text-weight-semibold);
+    color: var(--tag-text-color);
+  }
+  .nyproduceret{
+    font: var(--brand);
+    position:absolute;
+    text-align: center;
+    top: 295px;
+    right: 20px;
+    width:128px;
+    height: 24px;
+    background-color:var(--nyproduceret-background);
+    font-weight: var(--text-weight-semibold);
+    color: var(--tag-text-color);
   }
   
+  .favorite {
+    position:absolute;
+    right:12px;
+    top: 22.5rem;
+  }
+
+  .favorite_small{
+    position:absolute;
+    right:27px;
+    top: 17rem;
+  }
   h3{
     font-size: var(--title);
     padding-bottom:var(--space-between-items);
     font-weight: var(--text-weight-regular);
   }
   p{
-    padding-bottom:var(--space-between-items);
+    padding-bottom:var(--space-betweens-items);
   }
-  .small{
+  .p_small{
     font-size:var(--p-small);
+    font-weight: var(--text-weight-regular);  
   }
-  .large{
+  .p_large{
     font-size:var(--p-large);
-    font-weight: var(--text-weight-);
+    font-weight: var(--text-weight-medium);
+    padding-bottom:1px;
   }
   a {
     color: var(--link-default-color);
+    font-size: var(--text-size-sm);
   }
   a:hover{
     color:var(--link-hover-color);
   }
-  .artikel{
-    background:pink;
+  
+  .small{
+    width: var(--mobile-small-width);
+  }
+
+  .christmas{
+    width: var(--image-width-554);
+  }
+  .chair_small{
+    height:142px;
+    width:142px;
+  }
+
+  .chair_medium{
+    height:234px;
+    width:234px;
   }
 
 
-  /* Klasse hvis man vil ændre det enkelte card uden at ændre de andre. Dette kan dog ikke ses pga. en variant fra global.css er på lige nu.*/
+  
 
-  /*[data-variant="primary"] {
-    background: var(--primary-card-bg);
 
-  }*/
+  [data-variant="small"]{
+    width: var(--mobile-small-width);
+
+  }
+
+
+  [data-variant="desktop-small"]{
+    width:var(--width-264);  
+    padding: var(--padding-15); 
+  }
+
+  [data-variant="desktop-medium"]{
+    width:var(--width-570);
+    height:var(--height-362);
+    padding: var(--padding-15); 
+  }
+ 
+  @media (min-width:769px){
+  [data-variant="desktop-large"] {
+    width:var(--width-574);
+    padding: var(--padding-15); 
+    font-size: var(--text-size-xl);
+  }
+}
+
 
 </style>

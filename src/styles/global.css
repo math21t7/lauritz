@@ -33,12 +33,14 @@
     --text-size-md: 1.125rem;
     --text-size-sm: 1rem;
     --text-size-xs: 0.75rem;
-    --text-weight-bold: 700;
-    --text-weight-semibold: 600;
-    --text-weight-medium: 500;
-    --text-weight-regular: 400;
+    --text-weight-900:900;
+    --text-weight-800:800;
+    --text-weight-700: 700;
+    --text-weight-600: 600;
+  
 
     /*---mobile small---*/
+    --mobile-image-small: 142px;
 
  
 
@@ -46,12 +48,25 @@
     --text-padding: 10px;
     --padding-yx: 10px;
     --width-350: 350px;
+    --width-162: 162px;
     --border-2px: 2px solid var(--color-cream-500);
     --box-shadow: drop-shadow(0px 5px 8px var(--color-grey-100));
 
+    /*---desktop small--*/
+    --width-264:264px;
+    --text-padding-5: 2px;
 
-  /*---image---*/
-  
+    /*---desktop medium--*/
+    --width-570:570px;
+    --height-362:362px;
+
+    /*---desktop large--*/
+    --image-width-554: 554px;
+    --width-574:574px;
+    --padding-15:15px;
+
+
+
 
 
 
@@ -64,14 +79,21 @@
     --brand: var(--font-family);
     --p-small: var(--text-size-sm);
     --p-large: var(--text-size-md);
-    --text-weight-medium: var(--text-weight-400);
+    --text-weight-medium: var(--text-weight-700);
+    --text-weight-semibold: var(--text-weight-800);
 
     /*---farver---*/
     --primary-card-bg: var(--color-cream-300);
     --link-default-color: var(--color-red-300);
     --link-hover-color: var(--color-red-500);
+    --deluxe-background: var(--color-red-100);
+    --nyproduceret-background:var(--color-green-100);
+    --tag-text-color:var(--color-grey-500);
+
 
     /*---mobile small---*/
+
+    --mobile-small-width:var(--width-162);
 
   
 
@@ -83,11 +105,10 @@
     --mobile-border: var(--border-2px);
     --mobile-shadow:var(--box-shadow);
 
-  
-
     
 
     /*---desktop small---*/
+    --space-between-items-small-desktop: var(--text-padding-5);
 
     /*---desktop large---*/
 
