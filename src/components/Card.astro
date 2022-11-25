@@ -140,9 +140,11 @@ const { titel, beskrivelse, deluxe, variant, small, large, link, image, naeste_b
     width:var(--width-264);  
     padding: var(--padding-15); 
   }
+  @media (min-width:768px){
   [data-variant="desktop-small"]:hover{
     transform:scale(1.05)
   }
+}
 
 
   [data-variant="desktop-medium"]{
@@ -159,8 +161,10 @@ const { titel, beskrivelse, deluxe, variant, small, large, link, image, naeste_b
     font-size: var(--text-size-xl);
   }
 }
+@media (min-width:768px){
 [data-variant="desktop-large"]:hover{
     transform:scale(1.05)
   }
+}
 
 </style>
